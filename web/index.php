@@ -1,7 +1,7 @@
 <?php
 
 //redirección automática a index.php
-header("Location: aplicacion/principal/index.php");
+header("Location: aplicacion/personalizar/index.php");
 
 
 include_once(dirname(__FILE__) . "/cabecera.php");

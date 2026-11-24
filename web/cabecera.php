@@ -27,3 +27,25 @@ include_once(RUTABASE."/scripts/librerias/validacion.php");
 
 //creo todos los objetos que necesita mi aplicación
 include_once(RUTABASE."/aplicacion/principal/datos.php");
+
+
+
+/*Estas constantes contienen un array de los colores posibles para
+el texto y el fondo*/
+
+// Colores para el texto
+const COLORESTEXTO = [
+    "black" => "black",
+    "blue" => "blue",
+    "white" => "white",
+    "red" => "red"
+];
+
+// Colores para el fondo
+const COLORESFONDO = [
+    "white" => "white",
+    "red" => "red",
+    "green" => "green",
+    "yellow" => "yellow",
+    "pink" => "pink"
+];
