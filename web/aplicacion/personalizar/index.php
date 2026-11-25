@@ -2,14 +2,25 @@
 include_once(dirname(__FILE__) . "/../../cabecera.php");
 //controlador
 
-//Color texto (por defecto negro)
+$barraUbi = [
+    [
+        "TEXTO" => "Inicio",
+        "LINK"  => "/index.php"
+    ],
+    [
+        "TEXTO" => "inicio",
+        "LINK"  => ""
+    ]
+];
+
+//Color texto (por defecto negro si no existe la cookie)
 if (isset($_COOKIE["colorTexto"])) {
     $colorTexto = $_COOKIE["colorTexto"];
 }else {
     $colorTexto = "black";
 }
 
-//Color fondo (por defecto blanco)
+//Color fondo (por defecto blanco si no existe la cookie)
 if (isset($_COOKIE["colorFondo"])) {
     $colorFondo = $_COOKIE["colorFondo"];
 }else {
@@ -26,7 +37,6 @@ if (isset($_COOKIE["contador"])) {
 $contador++;
 //guardar contador en la cookie y caduca dentro de un año
 setcookie("contador", $contador, time() + 365 * 24 * 60 * 60);
-
 
 
 

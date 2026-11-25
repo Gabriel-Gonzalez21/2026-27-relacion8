@@ -26,7 +26,6 @@ include(RUTABASE."/aplicacion/plantilla/plantilla.php");
 include_once(RUTABASE."/scripts/librerias/validacion.php");
 
 //creo todos los objetos que necesita mi aplicación
-include_once(RUTABASE."/aplicacion/principal/datos.php");
 
 
 

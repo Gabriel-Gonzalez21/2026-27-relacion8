@@ -2,6 +2,16 @@
 include_once(dirname(__FILE__) . "/../../cabecera.php");
 //controlador
 
+$barraUbi = [
+    [
+        "TEXTO" => "Inicio",
+        "LINK"  => "/index.php"
+    ],
+    [
+        "TEXTO" => "perosnalizar",
+        "LINK"  => ""
+    ]
+];
 
 //Al pulsar en guardar
 if (isset($_POST["guardar"])) {
