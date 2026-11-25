@@ -25,6 +25,12 @@ spl_autoload_register(function ($clase){
 include(RUTABASE."/aplicacion/plantilla/plantilla.php");
 include_once(RUTABASE."/scripts/librerias/validacion.php");
 
+//Sesion creada para usarla en diferentes paginas
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+
 //creo todos los objetos que necesita mi aplicación
 
 

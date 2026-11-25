@@ -75,5 +75,6 @@ function cuerpo($contador)
     <p>Numero de visitas: <?= $contador ?></p>
 
     <a href="personalizar.php">Acceso a personalizar</a><br>
+    <a href="../texto/verTextos.php">Acceso a texos</a><br>
 <?php
 }
