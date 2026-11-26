@@ -25,8 +25,7 @@ class Acceso {
      *
      * @return boolean Devuelve true si se ha podido hacer. False en cualquier otro caso
      */
-    private function escribirASesion():bool
-    {
+    private function escribirASesion():bool{
      if (!isset($_SESSION))    
          return false;
      
@@ -42,6 +41,8 @@ class Acceso {
      {
          $_SESSION["acceso"]["validado"]=false;
      }
+
+        return true;
     }
     
     /**
@@ -118,7 +119,8 @@ class Acceso {
      * @return boolean Devuelve true si hay usuario registrado. False en caso contrario
      */
     public function hayUsuario():bool {
-     }
+        return $this->_validado;
+    }
     
     
     /**
@@ -127,8 +129,12 @@ class Acceso {
      * @param integer $numero Numero de permiso a comprobar
      * @return bool Devuelve true si hay usuario registrado y tiene el permiso indicado
      */
-    public function puedePermiso(int $numero):bool {
-       
+    public function puedePermiso(int $numero):bool{
+        if (!$this->hayUsuario()) {
+            return false;
+        }
+
+        return $this->_permisos[$numero] ?? false;
     }
     
     
@@ -142,8 +148,12 @@ class Acceso {
       * @return string|false
       */
     public function getNick():string|false 
-    { 
-       
+    {
+        if (!$this->hayUsuario()) {
+            return false;
+        }
+
+        return $this->_nick;
     }
   
     /**
