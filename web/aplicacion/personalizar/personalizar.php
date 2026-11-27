@@ -19,8 +19,8 @@ if (isset($_POST["guardar"])) {
 
     setcookie("colorFondo", $_POST["colorFondo"], time() + 365 * 24 * 60 * 60);
     
-    //volver al index para recargar
-    header("Location: index.php");
+    //recargar personalizar
+    header("Location: personalizar.php");
     exit;
 }
 

@@ -73,7 +73,7 @@ function inicioCuerpo(string $cabecera, array $barraUbi=[])
                     }
                     ?>
                 </ul>
-                <a href="../../aplicacion/personalizar/pruebas.php">Pruebas</a>
+                <!--<a href="../../aplicacion/personalizar/pruebas.php">Pruebas</a>-->
                  
                 
             </div>

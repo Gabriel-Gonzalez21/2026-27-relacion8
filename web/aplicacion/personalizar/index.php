@@ -76,5 +76,6 @@ function cuerpo($contador)
 
     <a href="personalizar.php">Acceso a personalizar</a><br>
     <a href="../texto/verTextos.php">Acceso a texos</a><br>
+    <a href="../acceso/login.php">Acceso a login</a>
 <?php
 }
